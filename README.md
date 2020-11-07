@@ -21,3 +21,31 @@ AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
 * Has documentation
 * Follows best practices
 NOTE -> Must be in class and method format
+
+# Process 
+#### 1. Create a Parent class
+* A Parent class is created called DNA_Parse.
+* The class is initialised to take a user input and convert to upper case.
+```python
+class DNA_Parse:
+    def __init__(self):
+        self.s=input("Please enter your string: \n").upper()
+```
+
+* Within the class, a letters function is defined which iterates through the string and counts the times the letters A, C, G, and T appears. This is returned in a formatted string. 
+```python
+    def letters(self):
+        for let in self.s:
+            return "{} {} {} {} ".format(self.s.count("A"),self.s.count("C"),self.s.count("G"),self.s.count("T"))
+```
+#### 2. Class Instantiation
+* A run file is created to instantiate the DNA_Parse class. 
+* The DNA_Parse class is imported.
+```python
+from string import DNA_Parse
+```
+* An instance is created called dna_test and the letters function is executed. 
+```python
+dna_test=DNA_Parse()
+print(dna_test.letters())
+```
