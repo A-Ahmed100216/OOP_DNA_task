@@ -10,4 +10,4 @@ class DNA_Parse:
         # For each letter in the string
         for let in self.s:
             # Return the count of A,C,G,T in a formatted string.
-            return "{} {} {} {} ".format(self.s.count("A"),self.s.count("C"),self.s.count("G"),self.s.count("T"))
+            return "A:{} C:{} G:{} T:{} ".format(self.s.count("A"),self.s.count("C"),self.s.count("G"),self.s.count("T"))
